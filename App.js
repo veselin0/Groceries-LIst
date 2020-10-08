@@ -1,10 +1,8 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import ShoppingList from './src/screens/ShoppingList';
 import AddProduct from './src/screens/AddProduct';
-import {StackActions} from 'react-navigation';
 
 // const HomeScreen = () => {
 //   return (
@@ -20,7 +18,16 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Shopping List" component={ShoppingList} />
+        <Stack.Screen
+          name="Shopping List"
+          options={ShoppingList.options}
+          component={ShoppingList}
+        />
+        <Stack.Screen
+          name="Add Product"
+          options={AddProduct.options}
+          component={AddProduct}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
