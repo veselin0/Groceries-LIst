@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import { List, ListItem, Body, Text, Right, Icon, Fab } from 'native-base';
 import { Container, Content } from 'native-base';
 import prompt from 'react-native-prompt-android';
+
 export default class AddProduct extends React.Component {
   static options = { title: 'Add a product' };
 
